@@ -4,13 +4,25 @@
 # TODO
 [ ]1. 소셜 로그인 passport
 
-[ ]2. 채팅 socketio
+[ ]2. ERD 작성 및 게시판 만들기 -> 구성을 조금 생각해봐야함  
 
-[ ]3. NESTJS test 코드 작성
+[ ]3. 채팅 socketio -> sendbird를 참조 ... 하지만 간단한 채팅
 
-[ ]4. docker hub CI/CD
+[ ]4. NESTJS test 코드 작성 
 
-[ ]5. kubernetes deploy
+[ ]5. docker hub CI/CD
+
+[ ]6. kubernetes deploy
+
+
+
+## 완료된 항목
+1. 기본 react, nestjs 셋팅 완료
+2. typeorm 설정완료
+3. socket io 기본 셋팅 완료
+4. docker compose 설정 완료
+5. swagger 셋팅 완료
+6. winston 셋팅 완료
 
 ## how to install
 
