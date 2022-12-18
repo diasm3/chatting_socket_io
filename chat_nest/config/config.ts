@@ -24,11 +24,11 @@ export default () => ({
     PORT: process.env.REACT_LOCAL_PORT,
   },
   REDIS: {
-    PORT: process.env.REDIS_LOCAL_PORT,
+    PORT: process.env.REACT_APP_REDIS_LOCAL_PORT,
     HOST:
       process.env.REACT_APP_ENV === 'local'
         ? 'localhost'
-        : process.env.REDIS_HOSTNAME,
+        : process.env.REACT_APP_REDIS_HOSTNAME,
   },
 
   databaseProviders: databaseProviders,

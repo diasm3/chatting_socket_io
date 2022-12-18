@@ -21,9 +21,9 @@ services:
       - --character-set-server=utf8mb4
       - --collation-server=utf8mb4_unicode_ci
 
-  front_app:
+  front:
     depends_on:
-      - back_end
+      - backend
     build: ./chat_react
     # dockerfile: Dockerfile
     restart: unless-stopped
@@ -31,13 +31,15 @@ services:
     ports:
       - $REACT_APP_LOCAL_PORT:$REACT_APP_DOCKER_PORT
 
-  back_end:
+  backend:
     depends_on:
       - redis
       - mariadb
     build: ./chat_nest
     restart: unless-stopped
     env_file: ./.env
+    expose:
+      - $REACT_APP_NEST_LOCAL_PORT
     ports:
       - $REACT_APP_NEST_LOCAL_PORT:$REACT_APP_NEST_DOCKER_PORT
     environment:
@@ -57,12 +59,12 @@ services:
     restart: unless-stopped
     hostname: redis_boot
     expose:
-      - $REDIS_LOCAL_PORT
+      - $REACT_APP_REDIS_LOCAL_PORT
     labels:
       - "name=redis"
       - "mode=standalone"
     ports:
-      - $REDIS_LOCAL_PORT:$REDIS_DOCKER_PORT
+      - $REACT_APP_REDIS_LOCAL_PORT:$REDIS_DOCKER_PORT
 
 volumes:
   db:

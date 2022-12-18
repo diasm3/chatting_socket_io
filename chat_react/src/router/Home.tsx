@@ -2,9 +2,10 @@ import axios from "axios"
 import { useQuery } from "react-query"
 import configs from "@/config/config"
 
-const ENDPOINT = `http://${configs().NEST.HOST}:${configs().NEST.PORT}`
+const ENDPOINT = `http://localhost:${configs().NEST.PORT}`
 
 export const Home = () => {
+console.log("home",ENDPOINT)
   const fetchData = async () => {
     try {
       const { data } = await axios(ENDPOINT)

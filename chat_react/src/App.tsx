@@ -7,11 +7,11 @@ import socketIOClient from "socket.io-client"
 import { useEffect } from "react"
 import configs from "@/config/config"
 
-const ENDPOINT = `http://${configs().NEST.HOST}:${configs().NEST.PORT}`
+const ENDPOINT = `localhost:${configs().NEST.PORT}`
 
 function App() {
   const socket = socketIOClient(ENDPOINT)
-  console.log(ENDPOINT)
+  console.log("APP",ENDPOINT)
 
 
   const enterChattingRoom = async () => {

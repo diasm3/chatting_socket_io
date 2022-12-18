@@ -17,17 +17,20 @@ import {
 } from "@chakra-ui/react"
 import socketIOClient from "socket.io-client"
 import { theme } from "../theme/theme"
+import configs from "@/config/config"
 
-export const { REACT_END_POINT } = process.env as {
-  [key: string]: string
-}
+const ENDPOINT = `localhost:${configs().NEST.PORT}`
 
-const socket = socketIOClient(REACT_END_POINT)
+
+
+const socket = socketIOClient(ENDPOINT)
 
 export const Chat = () => {
   const [userName, setUserName] = useState("")
   const [context, setContext] = useState("")
   const [chatList, setChatList] = useState([])
+
+console.log("chat",ENDPOINT)
 
   const onKeyUp = (event: any) => {
     if (event.charCode === 13) {
