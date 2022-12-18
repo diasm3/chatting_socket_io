@@ -29,17 +29,17 @@ services:
     restart: unless-stopped
     env_file: ./.env
     ports:
-      - $REACT_LOCAL_PORT:$REACT_DOCKER_PORT
+      - $REACT_APP_LOCAL_PORT:$REACT_APP_DOCKER_PORT
 
   back_end:
     depends_on:
       - redis
       - mariadb
-    build: ./nest-chat-realtime
+    build: ./chat_nest
     restart: unless-stopped
     env_file: ./.env
     ports:
-      - $REACT_NEST_LOCAL_PORT:$REACT_NEST_DOCKER_PORT
+      - $REACT_APP_NEST_LOCAL_PORT:$REACT_APP_NEST_DOCKER_PORT
     environment:
       - DB_HOST=mariadb
       - DB_USER=$DB_USERNAME
