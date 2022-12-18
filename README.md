@@ -12,7 +12,21 @@
 
 [ ]5. kubernetes deploy
 
+## how to install
 
+1. 리눅스나 윈도우에 git, docker, docker compose 설치
+2. git 클론해서 다운받는다
+
+```bash
+$ git clone https://github.com/diasm3/chatting_socket_io.git
+$ cd chatting_socket_io
+```
+
+3. docker compose 한다 (version 2.2.3)
+
+```bash
+$ sudo docker compose up -d
+```
 
 
 ## front spec
