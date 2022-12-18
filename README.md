@@ -22,3 +22,7 @@
 2. nestjs
 3. redis
 4. mariadb
+
+
+## CICD
+1. git action
