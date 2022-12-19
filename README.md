@@ -14,6 +14,10 @@
 
 [ ]6. kubernetes deploy
 
+[ ]7. auto scaling test  - https://youtu.be/QWweMlerTZY
+
+[ ]8. artillery 트래픽 테스트
+
 
 
 ## 완료된 항목
