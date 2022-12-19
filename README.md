@@ -1,4 +1,4 @@
-# 심심해서 만든 Front and Backend
+# 심심해서 만든 Front and Backend(12월 18일 ~ 1월 18일까지)
 
 
 # TODO
