@@ -14,7 +14,7 @@
 
 [ ]6. kubernetes deploy
 
-[ ]7. auto scaling test  - https://youtu.be/QWweMlerTZY
+[ ]7. auto scaling test  - https://youtu.be/QWweMlerTZY, https://omnious.ai/ko-kr/resources/keda-sqs-k8s-autoscaling/
 
 [ ]8. artillery 트래픽 테스트
 
