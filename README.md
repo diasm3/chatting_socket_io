@@ -1,5 +1,6 @@
 # 심심해서 만든 Front & Backend(12월 18일 ~ 1월 18일까지)
 
+# 가제 : 찬반 논쟁 채팅방
 
 # TODO
 [ ]1. 소셜 로그인 passport -> 어드민 계정을 나눠야함 (채팅 및 게시물 삭제 권한)
@@ -71,6 +72,6 @@ $ sudo docker compose up -d
 ## CICD
 1. git action
 
-
-## 실행방법
-docker compose
+## 배포
+1. 어디다 할까.... AWS?
+2. Nas?
