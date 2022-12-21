@@ -5,21 +5,26 @@ import { BrowserRouter } from "react-router-dom"
 import reportWebVitals from "./reportWebVitals"
 import { QueryClientProvider, QueryClient } from "react-query"
 import { ChakraProvider } from "@chakra-ui/react"
+import { Provider } from "react-redux"
 
 const root = ReactDOM.createRoot(document.getElementById("root")!)
 const queryClient = new QueryClient()
 
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        <ChakraProvider>
-          <App />
-        </ChakraProvider>
-      </BrowserRouter>
-    </QueryClientProvider>
+    {/* <Provider store={store}> */}
+      <QueryClientProvider client={queryClient}>
+        <BrowserRouter>
+          <ChakraProvider>
+            <App />
+          </ChakraProvider>
+        </BrowserRouter>
+      </QueryClientProvider>
+    {/* </Provider> */}
   </React.StrictMode>
 )
+
+ServiceWorkerRegistration
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
