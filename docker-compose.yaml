@@ -30,6 +30,8 @@ services:
     env_file: ./.env
     ports:
       - $REACT_APP_LOCAL_PORT:$REACT_APP_DOCKER_PORT
+    volumes:
+      - ./chat_react:/app
 
   backend:
     depends_on:
@@ -50,6 +52,8 @@ services:
       - DB_PORT=$DB_PORT
     stdin_open: true
     tty: true
+    volumes:
+      - ./chat_nest:/app
 
   redis:
     image: redis:alpine
@@ -68,3 +72,5 @@ services:
 
 volumes:
   db:
+  
+
