@@ -47,6 +47,11 @@ $ cd chatting_socket_io
 $ sudo docker compose up -d
 ```
 
+4. Docker환경에서 개발
+- 레포에서 클론을 했다면 chat_nest, chat_react 폴더가 있을 것이다.
+- docker compose 한 폴더에서 chat_nest와 chat_react가 도커로 마운팅 되어 있다.
+- vscode에서 docker extension을 이용해서 log를 확인하면서 코딩을 진행하면 된다.
+
 
 ## front spec
 1. react
